@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desencriptador - Oracle Challenge </title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets//js/script.js" defer></script>
+</head>
+<body>
+    <main class="main_cont">
+        <section class="text_container">
+            <div class="logo_container">
+                <img class="logo" src="./assets/images/aluraoracle.png" alt="logo de alura y oracle">
+            </div>
+            <textarea id="og_text" type="text" placeholder="Ingrese el texto aquí" require></textarea>
+            <div class="buttons_container">
+                <button onclick="encrypt()" class="button encrypt_btn">Encriptar</button>
+                <button onclick="decrypt()" class="button decrypt_btn">Desencriptar</button>
+            </div>
+        </section>
+        <section class="encrypted_text_container">
+            <p id="alter_text" class="encrypted_text"></p>
+            <button onclick="copy()" class="button copy_btn">Copiar</button>
+        </section>
+    </main>
+    <footer>Milagros Guzmán © </footer>
+</body>
+</html>
