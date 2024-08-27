@@ -25,8 +25,12 @@ function decrypt(){
 }
 async function copy(){
     try {
-        const textToCopy = document.getElementById('alter_text').innerHTML;
-        await navigator.clipboard.writeText(textToCopy);
+        const textToCopy = document.getElementById('alter_text');
+        await navigator.clipboard.writeText(textToCopy.innerHTML);
+        
+        setTimeout(()=>{
+            textToCopy.innerHTML = '';
+        },500);
     } catch (error) {
         console.error(error);
     }
