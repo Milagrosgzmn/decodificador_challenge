@@ -6,10 +6,12 @@ function encrypt(){
     if (!TEXT) {
         return
     }
-    const encryotedText = TEXT.split('').map(char => {
-        const charCode = char.charCodeAt(0);
-        return String.fromCharCode(charCode + SHIFT_N_CHARACTERS);
-    }).join('');
+    const encryotedText = TEXT
+    .replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/a/g, "ai")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat");
     newTextContainer.innerHTML = encryotedText;
 }
 function decrypt(){
@@ -17,10 +19,11 @@ function decrypt(){
     if (!TEXT) {
         return
     }
-    const decryptedText = TEXT.split('').map(char => {
-        const charCode = char.charCodeAt(0);
-        return String.fromCharCode(charCode - SHIFT_N_CHARACTERS);
-    }).join('');
+    const decryptedText = TEXT.replace(/enter/g, "e")
+    .replace(/imes/g, "i")
+    .replace(/ai/g, "a")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u");
     newTextContainer.innerHTML = decryptedText;
 }
 async function copy(){
